@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
@@ -13,6 +13,8 @@ import { RestaurantComponent } from './restaurants/restaurant/restaurant.compone
 
 import { ROUTES } from './app.routes';
 
+import { RestaurantsService } from './restaurants/restaurants.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,11 +26,11 @@ import { ROUTES } from './app.routes';
   ],
   imports: [
     BrowserModule,
-    HttpModule,
+    HttpClient,
     FormsModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [],
+  providers: [RestaurantsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
