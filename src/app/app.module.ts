@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
@@ -26,7 +26,7 @@ import { RestaurantsService } from './restaurants/restaurants.service';
   ],
   imports: [
     BrowserModule,
-    HttpClient,
+    HttpModule,
     FormsModule,
     RouterModule.forRoot(ROUTES)
   ],
