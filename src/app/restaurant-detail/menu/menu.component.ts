@@ -20,9 +20,5 @@ export class MenuComponent implements OnInit {
       this.route.parent.snapshot.params['id']
     )
   }
-
-  addMenuItem(item: MenuItem) {
-    console.log(item)
-  }
-
+  
 }
