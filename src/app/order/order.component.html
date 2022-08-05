@@ -22,16 +22,16 @@
             <div class="col-sm-6 col-xs-12">
               <mt-input-container errorMessage="Campo obrigatório e com 5 caracteres">
                 <input type="text" class="form-control" name="endereco" ngModel placeholder="Endereço"
-                       required  minlength="5" autocomplete="off" >
+                       required  minlength="5" autocomplete="off">
               </mt-input-container>
             </div>
-            <div class="col-sm-2 col-xs-6">
-              <mt-input-container errorMessage="Número obrigatório">
+            <div class="col-sm-3 col-xs-6">
+              <mt-input-container errorMessage="Obrigatório e somente números">
                 <input type="text" class="form-control" name="numero" ngModel placeholder="Número" 
-                       required autocomplete="off">
+                       required autocomplete="off" pattern="^[0-9]*$">
               </mt-input-container>
             </div>
-            <div class="col-sm-4 col-xs-6">
+            <div class="col-sm-3 col-xs-6">
               <mt-input-container>
                 <input type="text" class="form-control" name="complemento" 
                        ngModel placeholder="Complemento" autocomplete="off">
