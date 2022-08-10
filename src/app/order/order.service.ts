@@ -34,7 +34,7 @@ export class OrderService {
         return this.cartService.total();
     }
 
-    checkOrder(order: Order): Observable<string> {
+    checkOrder(order: Order): Observable<Order> {
         const headers = new Headers();
         headers.append('Content-Type', 'application/json');
         return this.http.post(`${MEAT_API}/orders`,

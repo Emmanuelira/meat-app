@@ -1,11 +1,7 @@
 <section class="content-header">
 </section>
-
 <section class="content">
   <section class="invoice">
-        <h4>Valid: {{ form?.valid }}</h4>
-        <h4>Object: {{ form?.value | json }}</h4>
-
         <form #form="ngForm" novalidate>
           <div class="row">
             <div class="col-xs-12">
@@ -13,8 +9,7 @@
                 <i class="fa fa-shopping-cart"></i> Finalize o seu pedido
               </h2>
             </div>
-          </div>                
-
+          </div>        
           <div class="row invoice-info">
             <div class="col-xs-12">
               <p class="lead">Endereço de Entrega:</p>
@@ -45,7 +40,6 @@
             <mt-order-itens [items]="cartItems()" (increaseQty)="increaseQty($event)"
                             (decreaseQty)="decreaseQty($event)" (remove)="remove($event)"></mt-order-itens>
           </div>
-
           <div class="row">
             <div class="col-sm-6 col-xs-12">
               <p class="lead">Formas de Pagamento:</p>
@@ -58,9 +52,7 @@
               <mt-delivery-costs [itemsValue]="itemsValue()" [delivery]="delivery"></mt-delivery-costs>
             </div>
           </div>
-
         </form>
-
         <div class="row">
           <div class="col-xs-12">
             <button (click)="checkOrder(form.value)" class="btn btn-success pull-right" [disabled]="form?.invalid || !cartItems().length">
@@ -68,6 +60,5 @@
             </button>
           </div>
         </div>
-
     </section>
 </section>
