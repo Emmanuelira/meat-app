@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ShoppingCartItem } from 'app/restaurant-detail/shopping-cart/shopping-cart.model';
 import { RadioOption } from 'app/shared/radio/radio-option.model';
@@ -19,12 +20,24 @@ export class OrderComponent implements OnInit {
     {label: "Cartão Refeição", value: "REF"}
   ];
 
+  orderForm: FormGroup;
+
   constructor(
     private orderService: OrderService,
-    private router: Router
+    private router: Router,
+    private fb: FormBuilder
   ) { }
 
   ngOnInit() {
+    this.orderForm = this.fb.group({
+      nome: this.fb.control(''),
+      email: this.fb.control(''),
+      emailConfirmation: this.fb.control(''),
+      endereco: this.fb.control(''),
+      numero: this.fb.control(''),
+      complemento: this.fb.control(''),
+      paymentOption: this.fb.control('')
+    })
   }
 
   itemsValue(): number {
