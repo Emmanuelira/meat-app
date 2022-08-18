@@ -16,10 +16,7 @@ import { ReviewsComponent } from './restaurant-detail/reviews/reviews.component'
 import { RestaurantsService } from './restaurants/restaurants.service';
 import { ROUTES } from './app.routes';
 import { ShoppingCartService } from './restaurant-detail/shopping-cart/shopping-cart.service';
-import { OrderComponent } from './order/order.component';
-import { OrderItensComponent } from './order/order-itens/order-itens.component';
 import { OrderService } from './order/order.service';
-import { DeliveryCostsComponent } from './order/delivery-costs/delivery-costs.component';
 import { OrderSumaryComponent } from './order-sumary/order-sumary.component';
 import { SharedModule } from './shared/shared.module';
 
@@ -35,9 +32,6 @@ import { SharedModule } from './shared/shared.module';
     ShoppingCartComponent,
     MenuItemComponent,
     ReviewsComponent,
-    OrderComponent,
-    OrderItensComponent,
-    DeliveryCostsComponent,
     OrderSumaryComponent
   ],
   imports: [
