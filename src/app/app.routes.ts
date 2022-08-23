@@ -1,6 +1,7 @@
 import { Routes } from "@angular/router";
 
 import { HomeComponent } from "./home/home.component";
+import { NotFoundComponent } from "./not-found/not-found.component";
 import { OrderSumaryComponent } from "./order-sumary/order-sumary.component";
 import { OrderComponent } from "./order/order.component";
 import { MenuComponent } from "./restaurant-detail/menu/menu.component";
@@ -19,6 +20,10 @@ export const ROUTES: Routes = [
     ]},
     { path: 'order-sumary', component: OrderSumaryComponent },
 
+    // LAZY LOADING
     { path: 'order', loadChildren: './order/order.module#OrderModule' },
-    { path: 'about', loadChildren: './about/about.module#AboutModule' }
+    { path: 'about', loadChildren: './about/about.module#AboutModule' },
+
+    // WILDCARD ROUTE
+    { path: '**', component: NotFoundComponent }
 ];
